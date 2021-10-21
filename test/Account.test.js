@@ -25,7 +25,7 @@ contract("Account", function (accounts) {
 
     const endBalance = (await account.checkBalance()).toNumber();
 
-    assert.equal(initialBalance, endBalance + amount);
+    assert.equal(initialBalance + amount, endBalance);
   });
 
   it("Withdraw money", async function () {
@@ -38,6 +38,6 @@ contract("Account", function (accounts) {
 
     const endBalance = (await account.checkBalance()).toNumber();
 
-    assert.equal(initialBalance, endBalance - amount);
+    assert.equal(initialBalance - amount, endBalance);
   });
 });
