@@ -1,7 +1,8 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Account {
-    uint256 public balance;
+    address private accountAddress;
+    uint256 private balance;
 
     constructor() public {
         balance = 100;
